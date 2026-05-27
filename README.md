@@ -102,7 +102,7 @@ Deep Learning Curriculum
 ## Past Work & Entrepreneurial Ventures
 
 ### 📱 Blynt *(sunset)*
-> I co-operated and shipped/etc. this was a cross-platform social application from end-to-end, i.e. from architecture through the App Store. At its peak, we had over 760 users and over 80 daily active users. The application has since been discontinued. I developed every part of it; authentication, real-time feeds, push notifications, and deployment were all part of the full stack of work I developed. My experience in creating a product that actually worked for users was very rewarding.
+> I co-operated and shipped/etc. this was a cross-platform social application from end-to-end, i.e. from architecture through the App Store. At its peak, we had over 760 users and over 80 daily active users. The application has since been discontinued. I authentication, real-time feeds, push notifications, and deployment. My experience in creating a product that actually worked for users was very rewarding.
 
 `Flutter` `Firebase` `Full Stack` `0→1`
 
