@@ -16,35 +16,28 @@ rishi = {
     "role"       : "ML Engineer (in progress)",
     "institute"  : "DJ Sanghvi College of Engineering  •  IT  •  2024–28",
     "interests"  : ["LLMs", "Transformers", "RAG", "CV", "Fine-tuning"],
-    "currently"  : "Crowd footfall analysis for retail — custom CCTV dataset + detection model",
+    "currently"  : "Crowd footfall analysis for retail - custom CCTV dataset + detection model",
     "principle"  : "Understand the math, then break it.",
 }
 ```
 
-Second-year IT student at DJ Sanghvi going deep on how language models and vision systems actually work — not as black boxes, but from attention mechanisms up. I care about the engineering rigour behind ML: reproducible experiments, clean pipelines, and models that ship.
+As an IT student in my second year at DJ Sanghvi, I am currently delving into the inner workings of computational models of language and vision - from the bottom up - paying particular attention to the engineering rigor behind machine learning via reproducible experiments, clean pipelines, and working models.
 
 ---
 
 ## Featured Projects
 
 ### 🔬 Retail Crowd Footfall Analysis *(active)*
-> Computer vision system for real-time footfall analytics in retail spaces using overhead CCTV streams. Currently **annotating a custom dataset** from scratch — bounding boxes, tracks, density maps — before training a detection + counting model. Focus on occlusion handling and multi-person tracking in constrained environments.
+> I am building a computer vision system for accurately determining footfall (i.e. foot traffic) in real-time in retail environments by analyzing video streams from overhead CCTV cameras. I am currently annotating an entirely new dataset from scratch by creating bounding boxes, tracking multiple people simultaneously, and creating density heatmaps. I will use this annotated data to train a model that supports detection and counting of people, emphasising handling occlusion (i.e. when someone blocks another person) and tracking multiple people when there are limited resources; the use of only one camera to monitor foot traffic.
 
 `Computer Vision` `Custom Dataset` `Object Detection` `Multi-object Tracking` `OpenCV`
 
 ---
 
 ### 🦴 Spine-Guard
-> Real-time AI rehabilitation platform. Uses **MediaPipe** pose estimation over live **WebSocket** streams to track spinal posture during exercises, flag deviations, and give immediate feedback. Built the full pipeline: landmark extraction → angle computation → threshold classification → frontend alerts.
+> I am working on a real time AI rehabilitation platform using **MediaPipe**'s pose estimation capabilities over real-time **WebSocket** API to track spinal posture while exercising, alerting the individual to any deviations and providing immediate feedback. I built the entire pipeline for this solution from landmark extraction to angle computation to threshold classification to issuing alerts to the web application used by rehabilitators.
 
 `MediaPipe` `WebSocket` `Real-time Inference` `Pose Estimation` `Python`
-
----
-
-### 📱 Blynt
-> Cross-platform social app shipped end-to-end. **760+ users, 80+ daily actives**. Co-founded, architected, and deployed — handles auth, real-time feeds, and push notifications at scale.
-
-`Flutter` `Firebase` `Supabase` `Full Stack`
 
 ---
 
@@ -93,9 +86,7 @@ Deep Learning Curriculum
 
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 
 ---
@@ -103,20 +94,17 @@ Deep Learning Curriculum
 ## GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Rishi0507&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=4FC3F7&icon_color=4FC3F7&text_color=c9d1d9" height="155"/>
-  &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rishi0507&theme=tokyonight&hide_border=true&layout=compact&bg_color=0d1117&title_color=4FC3F7&text_color=c9d1d9&hide=dart,html,css" height="155"/>
-</p>
-
-<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rishi0507&bg_color=0d1117&color=4FC3F7&line=1a6fa8&point=4FC3F7&area=true&hide_border=true" width="95%"/>
 </p>
 
 ---
 
-## Writing & Notes
+## Past Work & Entrepreneurial Ventures
 
-> 📝 I'm building out a public notebook — derivations, experiment logs, and engineering notes on transformers, RAG systems, and CV pipelines. Coming soon.
+### 📱 Blynt *(sunset)*
+> Co-founded and shipped a cross-platform social app end-to-end — from architecture to App Store. Reached **760+ users and 80+ daily actives** before being wound down. Owned the full stack: auth, real-time feeds, push notifications, and deployment. First real lesson in building something people actually use.
+
+`Flutter` `Firebase` `Full Stack` `0→1`
 
 ---
 
