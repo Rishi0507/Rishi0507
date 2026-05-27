@@ -102,7 +102,7 @@ Deep Learning Curriculum
 ## Past Work & Entrepreneurial Ventures
 
 ### 📱 Blynt *(sunset)*
-> Co-founded and shipped a cross-platform social app end-to-end — from architecture to App Store. Reached **760+ users and 80+ daily actives** before being wound down. Owned the full stack: auth, real-time feeds, push notifications, and deployment. First real lesson in building something people actually use.
+> I co-operated and shipped/etc. this was a cross-platform social application from end-to-end, i.e. from architecture through the App Store. At its peak, we had over 760 users and over 80 daily active users. The application has since been discontinued. I developed every part of it; authentication, real-time feeds, push notifications, and deployment were all part of the full stack of work I developed. My experience in creating a product that actually worked for users was very rewarding.
 
 `Flutter` `Firebase` `Full Stack` `0→1`
 
