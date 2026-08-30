@@ -1,13 +1,28 @@
-# Score the decision, not the outcome
+<!--
+  Setup, once:
+    1. Commit header.svg and decision.svg next to this file, at the repo root
+    2. If your default branch is "master", swap main -> master in the two image URLs below
+    3. header-ascii.txt is a plain-text version of the header, if you ever
+       want a code block instead of the animated SVG
+-->
 
-**Rishi Popawala** · AI software engineer · Mumbai
-DJ Sanghvi College of Engineering, Information Technology, 2024–28
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/header.svg"
+    width="900"
+    alt="ASCII portrait of Rishi Popawala beside a terminal readout: AI software engineer, Mumbai, shipping OJAS, Autopsy and Pavilion"
+  />
+</p>
 
 Three of the things I've built this year look unrelated: an exam-hall video pipeline, a menu diagnosis service, a daily cricket puzzle. They are the same argument each time. A system that makes a judgement should be scored on the judgement rather than the result, should say out loud where its answer came from, and should decline to answer when the data doesn't support one.
 
+**01** [OJAS](#ojas), exam-hall video &nbsp;&nbsp;·&nbsp;&nbsp; **02** [Autopsy](#autopsy), menu diagnosis &nbsp;&nbsp;·&nbsp;&nbsp; **03** [Pavilion](#pavilion), cricket puzzle
+
 ---
 
-## OJAS · Objective Judgement for Academic Sincerity
+<a id="ojas"></a>
+
+## 01 · OJAS: Objective Judgement for Academic Sincerity
 
 *Offline exam-hall video analytics. Built for PS2 at the DrishtiAI hackathon.*
 
@@ -17,11 +32,13 @@ Three stages, split by how expensive each one is to iterate on. **Python** for t
 
 `Python` `Go` `Next.js` `OpenCV` `YOLOv8n` `ByteTrack` `CLIP` `Ed25519`
 
-[→ repo](https://github.com/Rishi0507/Ojas-Objective-Judgement-for-Academic-Security-Drishti-AI)
+[repo →](https://github.com/Rishi0507/Ojas-Objective-Judgement-for-Academic-Security-Drishti-AI)
 
 ---
 
-## Autopsy
+<a id="autopsy"></a>
+
+## 02 · Autopsy
 
 *Diagnoses why a menu item is underperforming, then rewrites the listing three ways with a reason attached to every change.*
 
@@ -31,11 +48,13 @@ The part I care about is the honesty layer. It runs with zero API keys, and with
 
 `FastAPI` `RAG (TF-IDF)` `Structured output` `Eval harness` `Python`
 
-[→ repo](https://github.com/Rishi0507/Autopsy)
+[repo →](https://github.com/Rishi0507/Autopsy)
 
 ---
 
-## Pavilion
+<a id="pavilion"></a>
+
+## 03 · Pavilion
 
 *A daily T20 cricket puzzle. One target score per day, identical for every player in the world.*
 
@@ -53,6 +72,14 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 ---
 
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/decision.svg"
+    width="900"
+    alt="A fan of possible trajectories from a single decision point, with one highlighted"
+  />
+</p>
+
 ### The same idea, three times
 
 |  | What it decides | What it refuses to do |
@@ -63,20 +90,30 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 ---
 
-## Also in here
+<details>
+<summary><b>Also in here</b>, five more if you want the long tail</summary>
+<br>
 
-- **[Referee](https://github.com/Rishi0507/Referee)** — a benchmark harness for AI agent architectures. Fixed tasks with machine-verifiable ground truth, and identical prompts, tool access and grading on every run, so what's being compared is the architecture and nothing else.
-- **[Trace.ai](https://github.com/Rishi0507/Trace.ai)** — predicts recurring inflate-then-discount cycles per seller: seller-grouped XGBoost over STL-decomposed price history, catalogue-wide discount concurrency and seasonality, benchmarked against a single-product z-score baseline. The labels are simulated, and the README leads with that. An existence proof, not validated ground truth.
-- **[IFAS](https://github.com/Rishi0507/IFAS-Intelligent-Footfall-Analysis-System-for-Retail-Environments)** — retail footfall from a single overhead CCTV feed, on a dataset I annotated by hand. Occlusion is most of the problem.
-- **[Spine-Guard](https://github.com/abhishek-pandey7/Spine-Guard)** — real-time posture feedback for spinal rehab over a WebSocket, with a collaborator. Landmarks, joint angles, thresholds, alerts.
-- **[micrograd](https://github.com/Rishi0507/micrograd)**, **[LSTM-TextGen](https://github.com/Rishi0507/LSTM-TextGen)** — written to understand the thing rather than to import it.
+- **[Referee](https://github.com/Rishi0507/Referee).** A benchmark harness for AI agent architectures. Fixed tasks with machine-verifiable ground truth, and identical prompts, tool access and grading on every run, so what's being compared is the architecture and nothing else.
+- **[Trace.ai](https://github.com/Rishi0507/Trace.ai).** Predicts recurring inflate-then-discount cycles per seller: seller-grouped XGBoost over STL-decomposed price history, catalogue-wide discount concurrency and seasonality, benchmarked against a single-product z-score baseline. The labels are simulated, and the README leads with that. An existence proof, not validated ground truth.
+- **[IFAS](https://github.com/Rishi0507/IFAS-Intelligent-Footfall-Analysis-System-for-Retail-Environments).** Retail footfall from a single overhead CCTV feed, on a dataset I annotated by hand. Occlusion is most of the problem.
+- **[Spine-Guard](https://github.com/abhishek-pandey7/Spine-Guard).** Real-time posture feedback for spinal rehab over a WebSocket, with a collaborator. Landmarks, joint angles, thresholds, alerts.
+- **[micrograd](https://github.com/Rishi0507/micrograd)** and **[LSTM-TextGen](https://github.com/Rishi0507/LSTM-TextGen)**. Written to understand the thing rather than to import it.
+
+</details>
 
 ## Before this
 
-**Blynt** *(sunset)* — co-built and shipped a cross-platform social app end to end, architecture through App Store review. Auth, real-time feeds, push notifications, deployment. Around 760 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
+**Blynt** *(sunset).* Co-founded, built and shipped a cross-platform social app end to end. Microservices, real-time feeds, push notifications, deployment. Around 800 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
 
 ## Reach me
 
-[rishipopawala@gmail.com](mailto:rishipopawala@gmail.com) · [LinkedIn](https://linkedin.com/in/rishi-popawala-077624333)
+|  |  |
+| --- | --- |
+| mail | [rishipopawala@gmail.com](mailto:rishipopawala@gmail.com) |
+| linkedin | [/in/rishi-popawala-077624333](https://www.linkedin.com/in/rishi-popawala-077624333/) |
+| leetcode | [/u/RishiPopawala](https://leetcode.com/u/RishiPopawala/) |
+| codeforces | [/profile/Rishi0507](https://codeforces.com/profile/Rishi0507) |
+| codechef | [/users/rishipopawala](https://www.codechef.com/users/rishipopawala) |
 
 *If you want to know why something here is built the way it is, it's written down in the repo. Usually that's the more interesting file.*
