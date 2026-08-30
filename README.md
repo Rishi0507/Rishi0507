@@ -1,7 +1,8 @@
 <!--
   Setup, once:
-    1. Commit header.svg and decision.svg next to this file, at the repo root
-    2. If your default branch is "master", swap main -> master in the two image URLs below
+    1. Commit header.svg, decision.svg, stack.svg and linkedin.svg next to this
+       file, at the repo root
+    2. If your default branch is "master", swap main -> master in the image URLs
     3. header-ascii.txt is a plain-text version of the header, if you ever
        want a code block instead of the animated SVG
 -->
@@ -14,9 +15,32 @@
   />
 </p>
 
+<p align="center">
+  <a href="https://github.com/Rishi0507"><img src="https://cdn.simpleicons.org/github/f0b429" height="22" alt="github"/></a>
+  &nbsp;&nbsp;<a href="https://www.linkedin.com/in/rishi-popawala-077624333/"><img src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/linkedin.svg" height="22" alt="linkedin"/></a>
+  &nbsp;&nbsp;<a href="mailto:rishipopawala@gmail.com"><img src="https://cdn.simpleicons.org/gmail/f0b429" height="22" alt="gmail"/></a>
+  &nbsp;&nbsp;<a href="https://leetcode.com/u/RishiPopawala/"><img src="https://cdn.simpleicons.org/leetcode/f0b429" height="22" alt="leetcode"/></a>
+  &nbsp;&nbsp;<a href="https://codeforces.com/profile/Rishi0507"><img src="https://cdn.simpleicons.org/codeforces/f0b429" height="22" alt="codeforces"/></a>
+  &nbsp;&nbsp;<a href="https://www.codechef.com/users/rishipopawala"><img src="https://cdn.simpleicons.org/codechef/f0b429" height="22" alt="codechef"/></a>
+</p>
+
 Three of the things I've built this year look unrelated: an exam-hall video pipeline, a menu diagnosis service, a daily cricket puzzle. They are the same argument each time. A system that makes a judgement should be scored on the judgement rather than the result, should say out loud where its answer came from, and should decline to answer when the data doesn't support one.
 
 **01** [OJAS](#ojas), exam-hall video &nbsp;&nbsp;·&nbsp;&nbsp; **02** [Autopsy](#autopsy), menu diagnosis &nbsp;&nbsp;·&nbsp;&nbsp; **03** [Pavilion](#pavilion), cricket puzzle
+
+---
+
+### Stack
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/stack.svg"
+    width="900"
+    alt="Stack: languages; ml, nlp, llm and vision; services and surfaces"
+  />
+</p>
+
+No logo exists for the half that mattered most: RAG and reranking, Monte Carlo target search, empirical Bayes shrinkage, ByteTrack, CLIP verification, spectral residual saliency, Ed25519 hash chains.
 
 ---
 
@@ -104,16 +128,17 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 ## Before this
 
-**Blynt** *(sunset).* Co-founded, built and shipped a cross-platform social app end to end. Microservices, real-time feeds, push notifications, deployment. Around 800 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
+**Blynt** *(sunset).* Co-built and shipped a cross-platform social app end to end, architecture through App Store review. Auth, real-time feeds, push notifications, deployment. Around 760 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
 
 ## Reach me
 
-|  |  |
-| --- | --- |
-| mail | [rishipopawala@gmail.com](mailto:rishipopawala@gmail.com) |
-| linkedin | [/in/rishi-popawala-077624333](https://www.linkedin.com/in/rishi-popawala-077624333/) |
-| leetcode | [/u/RishiPopawala](https://leetcode.com/u/RishiPopawala/) |
-| codeforces | [/profile/Rishi0507](https://codeforces.com/profile/Rishi0507) |
-| codechef | [/users/rishipopawala](https://www.codechef.com/users/rishipopawala) |
+|  |  |  |
+| :-: | --- | --- |
+| <img src="https://cdn.simpleicons.org/gmail/f0b429" height="20" alt="gmail"/> | **mail** | [rishipopawala@gmail.com](mailto:rishipopawala@gmail.com) |
+| <img src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/linkedin.svg" height="20" alt="linkedin"/> | **linkedin** | [/in/rishi-popawala-077624333](https://www.linkedin.com/in/rishi-popawala-077624333/) |
+| <img src="https://cdn.simpleicons.org/github/f0b429" height="20" alt="github"/> | **github** | [/Rishi0507](https://github.com/Rishi0507) |
+| <img src="https://cdn.simpleicons.org/leetcode/f0b429" height="20" alt="leetcode"/> | **leetcode** | [/u/RishiPopawala](https://leetcode.com/u/RishiPopawala/) |
+| <img src="https://cdn.simpleicons.org/codeforces/f0b429" height="20" alt="codeforces"/> | **codeforces** | [/profile/Rishi0507](https://codeforces.com/profile/Rishi0507) |
+| <img src="https://cdn.simpleicons.org/codechef/f0b429" height="20" alt="codechef"/> | **codechef** | [/users/rishipopawala](https://www.codechef.com/users/rishipopawala) |
 
 *If you want to know why something here is built the way it is, it's written down in the repo. Usually that's the more interesting file.*
