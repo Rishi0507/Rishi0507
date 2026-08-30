@@ -128,7 +128,7 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 ## Before this
 
-**Blynt** *(sunset).* Co-built and shipped a cross-platform social app end to end, architecture through App Store review. Auth, real-time feeds, push notifications, deployment. Around 760 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
+**Blynt** *(sunset).* Co-founded,built and shipped a cross-platform social app end to end, architectur. Microservices, real-time feeds, push notifications, deployment. Around 800 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
 
 ## Reach me
 
