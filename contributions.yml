@@ -1,0 +1,30 @@
+name: contributions
+
+# Regenerates contributions.svg from GitHub's public calendar page.
+# No token, no secrets, no third-party service.
+# Goes at .github/workflows/contributions.yml
+
+on:
+  schedule:
+    - cron: "17 3 * * *"      # daily, 03:17 UTC
+  workflow_dispatch:           # and whenever you press the button
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render
+        run: python3 contributions.py Rishi0507 contributions.svg
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contributions.svg
+          git diff --staged --quiet || git commit -m "contributions: refresh"
+          git push
