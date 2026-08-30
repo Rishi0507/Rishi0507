@@ -1,121 +1,82 @@
-<!-- Header -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f1e,50:0d2137,100:1a3a5c&height=220&section=header&text=Rishi%20Popawala&fontSize=52&fontColor=e2f0ff&animation=twinkling&fontAlignY=36&desc=ML%20Engineer%20%7C%20LLMs%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20Transformers%20%7C%20DJ%20Sanghvi&descSize=14&descAlignY=58&descColor=7fb3d3" />
-</p>
+# Score the decision, not the outcome
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=3000&pause=800&color=4FC3F7&center=true&vCenter=true&width=600&lines=Building+at+the+intersection+of+research+%26+engineering;RAG+pipelines+%7C+Fine-tuning+%7C+Custom+datasets;Transformers+from+scratch+%E2%80%94+not+just+import+transformers;Computer+vision+for+real-world+problems" />
-</p>
+**Rishi Popawala** · AI software engineer · Mumbai
+DJ Sanghvi College of Engineering, Information Technology, 2024–28
+
+Three of the things I've built this year look unrelated: an exam-hall video pipeline, a menu diagnosis service, a daily cricket puzzle. They are the same argument each time. A system that makes a judgement should be scored on the judgement rather than the result, should say out loud where its answer came from, and should decline to answer when the data doesn't support one.
 
 ---
 
-## `whoami`
+## OJAS · Objective Judgement for Academic Sincerity
 
-```python
-rishi = {
-    "role"       : "ML Engineer (in progress)",
-    "institute"  : "DJ Sanghvi College of Engineering  •  IT  •  2024–28",
-    "interests"  : ["LLMs", "Transformers", "RAG", "CV", "Fine-tuning"],
-    "currently"  : "Crowd footfall analysis for retail - custom CCTV dataset + detection model",
-    "principle"  : "Understand the math, then break it.",
-}
-```
+*Offline exam-hall video analytics. Built for PS2 at the DrishtiAI hackathon.*
 
-As an IT student in my second year at DJ Sanghvi, I am currently delving into the inner workings of computational models of language and vision - from the bottom up - paying particular attention to the engineering rigor behind machine learning via reproducible experiments, clean pipelines, and working models.
+800 centres, 4 cameras, 3 hours: 9,600 camera-hours per exam session, roughly 400 days of continuous viewing for one person. Nobody watches all of it. So the problem is not "detect cheating." It is deciding where the few reviewer-hours that actually exist should go, and evidencing that decision well enough to survive an appeal. OJAS ranks footage and a human confirms or dismisses. A wrong, unappealable accusation is a worse failure than a missed one, and every threshold in the codebase falls out of that one sentence.
+
+Three stages, split by how expensive each one is to iterate on. **Python** for the classical CV: a motion ensemble of frame differencing, MOG2/KNN background subtraction and Farneback optical flow, weighted so that each method's failure mode is covered by the other two, plus spectral-residual saliency lifted from 2-D image work and applied instead to the 1-D motion time series, which buys sudden non-periodic motion for one FFT pass over the whole video. **Go** for detection, anonymised tracking, pose micro-motion and CLIP verification, compiled to a single static binary an exam centre can run with no Python environment on the machine. **Next.js** for the review surface, where verdicts are written into an Ed25519-signed hash-chain custody ledger and exported as signed incident reports. The calibration engine refuses to propose a threshold when the data won't support one.
+
+`Python` `Go` `Next.js` `OpenCV` `YOLOv8n` `ByteTrack` `CLIP` `Ed25519`
+
+[→ repo](https://github.com/Rishi0507/Ojas-Objective-Judgement-for-Academic-Security-Drishti-AI)
 
 ---
 
-## Featured Projects
+## Autopsy
 
-### 🔬 Retail Crowd Footfall Analysis *(active)*
-> I am building a computer vision system for accurately determining footfall (i.e. foot traffic) in real-time in retail environments by analyzing video streams from overhead CCTV cameras. I am currently annotating an entirely new dataset from scratch by creating bounding boxes, tracking multiple people simultaneously, and creating density heatmaps. I will use this annotated data to train a model that supports detection and counting of people, emphasising handling occlusion (i.e. when someone blocks another person) and tracking multiple people when there are limited resources; the use of only one camera to monitor foot traffic.
+*Diagnoses why a menu item is underperforming, then rewrites the listing three ways with a reason attached to every change.*
 
-`Computer Vision` `Custom Dataset` `Object Detection` `Multi-object Tracking` `OpenCV`
+Retrieval pulls the strongest comparable items in the same category, ranked on a blend of text similarity and how well those items are genuinely selling. One LLM call returns a structured diagnosis grounded in them: pricing problem, photo problem, weak description, or placement. A second, chained call turns that diagnosis into three rewrites with deliberately different angles and a rationale for each.
 
----
+The part I care about is the honesty layer. It runs with zero API keys, and without one every call falls through to a deterministic generator reasoning over exactly the data a real model would see. Every response is stamped `"generation_mode": "live"` or `"mock"`, so a fallback can never quietly pass as a generation. The benchmark harness asks whether the retrieval step actually makes diagnoses more specific than a zero-shot version, and keeps pipeline validation separate from model-quality evaluation, because those are two different questions and conflating them is how a demo starts lying. The dataset is structured and synthetic on purpose, for provenance and ToS reasons, and the README says so before it says anything else.
 
-### 🦴 Spine-Guard
-> I am working on a real time AI rehabilitation platform using **MediaPipe**'s pose estimation capabilities over real-time **WebSocket** API to track spinal posture while exercising, alerting the individual to any deviations and providing immediate feedback. I built the entire pipeline for this solution from landmark extraction to angle computation to threshold classification to issuing alerts to the web application used by rehabilitators.
+`FastAPI` `RAG (TF-IDF)` `Structured output` `Eval harness` `Python`
 
-`MediaPipe` `WebSocket` `Real-time Inference` `Pose Estimation` `Python`
+[→ repo](https://github.com/Rishi0507/Autopsy)
 
 ---
 
-## What I'm Currently Studying
+## Pavilion
 
-```
-Deep Learning Curriculum
-├── Sequence Models
-│   ├── RNNs — vanishing gradients, BPTT
-│   ├── LSTMs & GRUs — gating mechanisms
-│   └── Attention — Bahdanau → self-attention
-├── Transformer Architecture
-│   ├── Multi-head attention from scratch
-│   ├── Positional encodings
-│   └── Pre-training objectives (MLM, CLM)
-├── LLM Engineering
-│   ├── RAG pipelines — chunking, retrieval, reranking
-│   ├── Fine-tuning on custom datasets (LoRA / QLoRA)
-│   └── Prompt engineering & structured outputs
-└── Computer Vision
-    ├── Detection: YOLO family
-    ├── Tracking: DeepSORT, ByteTrack
-    └── Custom dataset annotation pipelines
-```
+*A daily T20 cricket puzzle. One target score per day, identical for every player in the world.*
+
+You play both innings of that target. First you defend it with five bowlers and a four-over limit each, then you chase it on a budget of six attacking overs. It counts as solved only when both halves are won.
+
+**The target is solved, not chosen.** Overnight, a generator simulates thousands of full games at candidate targets and keeps only situations where a competent player wins between 35 and 65 percent of the time and where the bowling choice measurably changes the result. A target you would win nine times in ten is not a puzzle. The search covers the whole tuple of target, attack, chasing side and venue, because the attack you are dealt is part of the problem rather than set dressing.
+
+**The randomness is pre-committed.** The dice are not rolled when you click. Every ball of the day has a fixed coordinate of day, innings, over and delivery, and its random number is derived from the day's key plus that coordinate. Ball four of over twelve carries the same number whether you reach it or not, so replaying cannot fish for a better outcome and every player genuinely meets the same deliveries. Your choices move the probabilities, not the dice.
+
+Which is what makes the scoring possible. Summing win-probability changes across an innings telescopes to the final result, so it measures luck. Instead, before each ball the engine evaluates every option that was available at that moment and scores the gap between what you chose and the best thing you could have chosen. A careful player who loses can score positively.
+
+Go end to end with no cgo, so the server is one static binary: SQLite is the pure-Go implementation and model inference is a hand-written tree evaluator rather than ONNX, with fixed parity fixtures asserting the Go and Python paths agree. Ball-by-ball data comes from Cricsheet under ODC-BY 1.0; batting hand and bowling type resolve through Wikidata and therefore carry CC BY-SA. The two are kept in separate files so the share-alike obligation stays scoped to the attribute table instead of spreading into the corpus and the models.
+
+`Go` `Monte Carlo` `Empirical Bayes` `Python (uv)` `SQLite` `Make`
 
 ---
 
-## Tech Stack
+### The same idea, three times
 
-**ML / AI**
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
-![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=flat-square&logo=google&logoColor=white)
-
-**LLM / Data**
-
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white)
-
-**Infra / Full Stack**
-
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black)
-![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
+|  | What it decides | What it refuses to do |
+| --- | --- | --- |
+| **OJAS** | which minutes of footage a human should spend time on | call it cheating, or set a threshold the data won't carry |
+| **Autopsy** | why a listing underperforms, and what to change | let a fallback response pass as a model's |
+| **Pavilion** | how good your call was against the calls you had | roll the dice after you've made the choice |
 
 ---
 
-## GitHub Stats
+## Also in here
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Rishi0507&bg_color=0d1117&color=4FC3F7&line=1a6fa8&point=4FC3F7&area=true&hide_border=true" width="95%"/>
-</p>
+- **[Referee](https://github.com/Rishi0507/Referee)** — a benchmark harness for AI agent architectures. Fixed tasks with machine-verifiable ground truth, and identical prompts, tool access and grading on every run, so what's being compared is the architecture and nothing else.
+- **[Trace.ai](https://github.com/Rishi0507/Trace.ai)** — predicts recurring inflate-then-discount cycles per seller: seller-grouped XGBoost over STL-decomposed price history, catalogue-wide discount concurrency and seasonality, benchmarked against a single-product z-score baseline. The labels are simulated, and the README leads with that. An existence proof, not validated ground truth.
+- **[IFAS](https://github.com/Rishi0507/IFAS-Intelligent-Footfall-Analysis-System-for-Retail-Environments)** — retail footfall from a single overhead CCTV feed, on a dataset I annotated by hand. Occlusion is most of the problem.
+- **[Spine-Guard](https://github.com/abhishek-pandey7/Spine-Guard)** — real-time posture feedback for spinal rehab over a WebSocket, with a collaborator. Landmarks, joint angles, thresholds, alerts.
+- **[micrograd](https://github.com/Rishi0507/micrograd)**, **[LSTM-TextGen](https://github.com/Rishi0507/LSTM-TextGen)** — written to understand the thing rather than to import it.
 
----
+## Before this
 
-## Past Work & Entrepreneurial Ventures
+**Blynt** *(sunset)* — co-built and shipped a cross-platform social app end to end, architecture through App Store review. Auth, real-time feeds, push notifications, deployment. Around 760 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
 
-### 📱 Blynt *(sunset)*
-> I co-operated and shipped/etc. this was a cross-platform social application from end-to-end, i.e. from architecture through the App Store. At its peak, we had over 760 users and over 80 daily active users. The application has since been discontinued. I authentication, real-time feeds, push notifications, and deployment. My experience in creating a product that actually worked for users was very rewarding.
+## Reach me
 
-`Flutter` `Firebase` `Full Stack` `0→1`
+[rishipopawala@gmail.com](mailto:rishipopawala@gmail.com) · [LinkedIn](https://linkedin.com/in/rishi-popawala-077624333)
 
----
-
-## Connect
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/rishi-popawala-077624333)
-[![Email](https://img.shields.io/badge/rishipopawala%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:rishipopawala@gmail.com)
-
----
-
-<!-- Footer -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a3a5c,50:0d2137,100:0a0f1e&height=100&section=footer" />
-</p>
+*If you want to know why something here is built the way it is, it's written down in the repo. Usually that's the more interesting file.*
