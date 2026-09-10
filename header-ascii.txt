@@ -1,30 +1,31 @@
                                                    abhishek@pandey:~$ whoami
                                                    ──────────────────────────────────────────────
                                                     role .......... Software & AI Engineer
-                 ;;i,..      .                      based ......... Mumbai, India
-                .:,: .. ..    .                     education ..... DJ Sanghvi · IT · CGPA 9.15
-               ..  .;,:,       ,                    writes ........ C++ · Python · TypeScript
-                :rh3;:i:;:     .                    builds with ... LangChain · FastAPI · Next.js
-              :iiiBhi;:i;;.,::.                     focus ......... agentic systems that observe,
-               i3SM3#B&Gr;;r;s                                      act, and verify their own work
-                 5 AMXAi:;;r;
-                 X2Xr:,;;;ii                       abhishek@pandey:~$ ls experience/
-                  :,:::,:;r;                       ──────────────────────────────────────────────
-                   ,.,::;;i,.                       Jireh Studios . co-founder, full stack
-                AM;  .:;:,.  sX;                    Global Pathway  SWE & AI research
-           XhS&@@5.:    ..  .25isMMh5               DJ Init.AI .... AI research mentee
-        3#&@@@@@9.,.  . ... X@BG9@@@@@BM
-       H@@@@&@@@H ..        s9B9hB@&GHSSA          abhishek@pandey:~$ contact
-       #&G&@&@@@3 .:i;     .#9B5h&@GrX3A3          ──────────────────────────────────────────────
-       #9G&@@@@@s  .:, .,. i@@#X#&@h:A5X3i          mail .......... abhishekpandey.dev@yahoo.com
-       &99&@@@@@i   .,:;:  2@&shG@@3:AMh3X          linkedin ...... /in/abhishek-pandey-409681332
-      r@#9@@@@@&,   .,::.  G@5iH9@@3 sGM3X          leetcode ...... /u/abhishekp_7
-      h939&@@@@S    .,..  .&9,3#9#G2,ih35A
-      S#29@&@@@3    .:,   r@si&GHMMA::5525,        abhishek@pandey:~$
-      #SAB@B&@@A    ,:.   hB.X@B&BMA,.XM33i
-      #Hs9B99&@r   ,:..   G5:s@&#H2A..sGh3X
-     sBHM#9&&@&: ,;;;:...,Ms;s9G3AAA:,ihM33
-     3MA29BB@@S .ii,..   iMXrXG3AXAAr,:s23h
-    ;hXi;B&@@@2 .,. ..   rhrXsXsrXAAX;.sSM3
-     SHMh&@@@@r   .,     s5;rirh2srsXr ;GHM,
-     BBGh9@@@&:   ,:.....rM2HS#@B9S#s ,;sA5:
+           :;ii:iX,                                 based ......... Mumbai, India
+         :i:,,,,:rXs,                               education ..... DJ Sanghvi · IT · CGPA 9.15
+       .i::,,....,,iM:                              writes ........ C++ · Python · TypeScript
+       @i,:sXrr;:,..s5                              builds with ... LangChain · FastAPI · Next.js
+       2:s&h53AAsrr;A:                              focus ......... agentic systems that observe,
+       :sMMAsi3s:;iXX                                               act, and verify their own work
+       ,&&M5X2@3rrsA3                       
+        MGMMA5AsrirXG                              abhishek@pandey:~$ ls experience/
+        i5h33B@&Ai;2s                              ──────────────────────────────────────────────
+          sA353Asrir                                Jireh Studios . co-founder, full stack
+          i5A33srirr                                Global Pathway  SWE & AI research
+          ;h32Xi;;rX                                DJ Init.AI .... AI research mentee
+         ;Ah332s;iisXri;:                   
+     ,;X2@H52A2siiiiX9S,:;;i,                      abhishek@pandey:~$ contact
+  .:;::H###S32ssAXX5SHGi...;#3r.                   ──────────────────────────────────────────────
+  Xr,,,A#@&&@S5hhHHM933A...,GHH5,                   mail .......... abhishekpandey.dev@yahoo.com
+ s#A,,,s@@BGSSSMMH999h5B;..,rh392                   linkedin ...... /in/abhishek-pandey-409681332
+i@@X...X&@@GGSSSMM999GM&G,..,535S;                  leetcode ...... /u/abhishekp_7
+r&@i...H&@@BBGGSMMH9hBGGS2..:22Hh3          
+rH@i,,;##@&BBBGGHMHH9GSG9&..XA2B5B:                abhishek@pandey:~$
+r5MXi.s##BGGBBBG9MHHHSSSMSs:A3BG99s         
+s33X2:X#@&BB&B&SHHMMMMSHHhS;35&GMhA         
+r5A25rs#@@G&&B&SH9MSMMM99hSrAh&BGHX         
+r5A25si#@@G&&&&G9hHSSMHH9552sBGh5#B         
+r5A25X;#@@&&&@&B9h9GBSM99hh9s;:;;##A,,,,X##2
+rH2XAX;#@@B&@@@B9hhGBGSHH99S#r;;;B#########2
+;XXXs3:Bhh3355532AA23322222A&A::;29hhhhhh9hX
+                                            
