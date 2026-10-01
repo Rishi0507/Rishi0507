@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" font-family="ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,DejaVu Sans Mono,monospace">
+<defs><linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7fd4ff" stop-opacity="0"/><stop offset="0.5" stop-color="#7fd4ff" stop-opacity="0.45"/><stop offset="1" stop-color="#7fd4ff" stop-opacity="0"/></linearGradient></defs>
+<rect x="0.5" y="0.5" width="899" height="199" rx="12" fill="#080c11" stroke="#161f2b"/>
+<text x="28" y="32" font-size="12" fill="#5c7080">one real FDA notice through the whole chain, against a live Shopify store</text>
+
+<line x1="85" y1="70" x2="815" y2="70" stroke="#22303f" stroke-width="1.4"/>
+<line x1="85" y1="70" x2="815" y2="70" stroke="#f0b429" stroke-width="2" stroke-dasharray="730" stroke-dashoffset="0"></line>
+<rect x="60" y="54" width="26" height="32" fill="url(#sweep)" opacity="0.6"><animate attributeName="x" values="60;800" dur="3.4s" begin="0s" repeatCount="indefinite"/></rect>
+
+<g font-size="12">
+<circle cx="85" cy="70" r="5" fill="#f0b429"/>
+<text x="85" y="104" text-anchor="middle" fill="#f0b429" font-size="13">notice</text>
+<text x="85" y="126" text-anchor="middle" fill="#c9d8e5">FDA H-1258-2026</text>
+<text x="85" y="144" text-anchor="middle" fill="#7b93a8">undeclared fish</text>
+
+<circle cx="231" cy="70" r="5" fill="#f0b429"></circle>
+<text x="231" y="104" text-anchor="middle" fill="#f0b429" font-size="13">matched</text>
+<text x="231" y="126" text-anchor="middle" fill="#c9d8e5">lot 1226183</text>
+<text x="231" y="144" text-anchor="middle" fill="#7b93a8">confidence 0.972</text>
+
+<circle cx="377" cy="70" r="5" fill="#f0b429"></circle>
+<text x="377" y="104" text-anchor="middle" fill="#f0b429" font-size="13">held</text>
+<text x="377" y="126" text-anchor="middle" fill="#c9d8e5">40 units held</text>
+<text x="377" y="144" text-anchor="middle" fill="#7b93a8">60 stay on sale</text>
+
+<circle cx="523" cy="70" r="5" fill="#f0b429"></circle>
+<text x="523" y="104" text-anchor="middle" fill="#f0b429" font-size="13">rescued</text>
+<text x="523" y="126" text-anchor="middle" fill="#c9d8e5">refund or cancel</text>
+<text x="523" y="144" text-anchor="middle" fill="#7b93a8">before it ships</text>
+
+<circle cx="669" cy="70" r="5" fill="#f0b429"></circle>
+<text x="669" y="104" text-anchor="middle" fill="#f0b429" font-size="13">watched</text>
+<text x="669" y="126" text-anchor="middle" fill="#c9d8e5">5 resale listings</text>
+<text x="669" y="144" text-anchor="middle" fill="#7b93a8">of the held lot</text>
+
+<circle cx="815" cy="70" r="5" fill="#f0b429"></circle>
+<text x="815" y="104" text-anchor="middle" fill="#f0b429" font-size="13">proved</text>
+<text x="815" y="126" text-anchor="middle" fill="#c9d8e5">9 events chained</text>
+<text x="815" y="144" text-anchor="middle" fill="#7b93a8">chain verifies</text>
+</g>
+
+<line x1="28" y1="166" x2="872" y2="166" stroke="#161f2b"/>
+<text x="28" y="186" font-size="11" fill="#5c7080">the notice names a lot, so only that lot leaves the shelf. the rest of the product keeps selling.</text>
+</svg>

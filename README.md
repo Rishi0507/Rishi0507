@@ -1,17 +1,8 @@
-<!--
-  Setup, once:
-    1. Commit header.svg, decision.svg, stack.svg and linkedin.svg next to this
-       file, at the repo root
-    2. If your default branch is "master", swap main -> master in the image URLs
-    3. header-ascii.txt is a plain-text version of the header, if you ever
-       want a code block instead of the animated SVG
--->
-
 <p align="center">
   <img
     src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/header.svg"
     width="900"
-    alt="ASCII portrait of Rishi Popawala beside a terminal readout: AI software engineer, Mumbai, shipping OJAS, Autopsy and Pavilion"
+    alt="ASCII portrait of Rishi Popawala beside a terminal readout: AI software engineer, Mumbai, shipping Manhattan, Soteria and Pavilion"
   />
 </p>
 
@@ -24,55 +15,59 @@
   &nbsp;&nbsp;<a href="https://www.codechef.com/users/rishipopawala"><img src="https://cdn.simpleicons.org/codechef/f0b429" height="22" alt="codechef"/></a>
 </p>
 
-Three of the things I've built this year look unrelated: an exam-hall video pipeline, a menu diagnosis service, a daily cricket puzzle. They are the same argument each time. A system that makes a judgement should be scored on the judgement rather than the result, should say out loud where its answer came from, and should decline to answer when the data doesn't support one.
+Three of the things I've built this year look unrelated: a settlement reconciliation engine, a food recall system, a daily cricket puzzle. They are the same argument each time. A system that makes a judgement should be scored on the judgement rather than the result, should say out loud where its answer came from, and should decline to act when the data doesn't support it.
 
-**01** [OJAS](#ojas), exam-hall video &nbsp;&nbsp;·&nbsp;&nbsp; **02** [Autopsy](#autopsy), menu diagnosis &nbsp;&nbsp;·&nbsp;&nbsp; **03** [Pavilion](#pavilion), cricket puzzle
+**01** [Manhattan](#manhattan), settlement reconciliation &nbsp;&nbsp;·&nbsp;&nbsp; **02** [Soteria](#soteria), food recalls &nbsp;&nbsp;·&nbsp;&nbsp; **03** [Pavilion](#pavilion), cricket puzzle
 
 ---
 
-### Stack
+<a id="manhattan"></a>
+
+## 01 · Manhattan
+
+*Settlement reconciliation that proves its answers, and refuses when it cannot.*
+
+A bank credit lands and somebody has to say which payments, refunds and disputes it settles. The gateway's settlement report already names a batch, and posting that mapping is instant and right almost every time. Almost is the problem: across 996 settlements, trusting the report posts 39 wrong, and nothing marks which ones.
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/stack.svg"
+    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/manhattan.svg"
     width="900"
-    alt="Stack: languages; ml, nlp, llm and vision; services and surfaces"
+    alt="Two bars over 996 settlements. Trusting the report: 848 posted, 39 of them wrong, 148 unpostable. Manhattan: 714 posted with 0 wrong, 282 held with a cause, a remedy and a price"
   />
 </p>
 
-No logo exists for the half that mattered most: RAG and reranking, Monte Carlo target search, empirical Bayes shrinkage, ByteTrack, CLIP verification, spectral residual saliency, Ed25519 hash chains.
+Manhattan derives the batch from the amounts where the amounts allow it: a cardinality-dispatched meet-in-the-middle search, then exhaustive counting to establish that the answer is the only one. Where amounts repeat, a flat ₹499 subscription for example, derivation is impossible, so it checks the batch the report claims instead, which costs the same on every merchant. Anything it can neither prove nor check is held with a named cause, the change that would clear it, and what clearing it costs.
+
+Models read bank narration, choose repair actions and draft notes, but a model answer only reaches the pipeline as a schema-validated edit to the inputs. Whether the money is accounted for is settled by integer arithmetic re-run over those inputs, so a better model clears more and a worse one clears less, and neither changes whether what cleared was right. `manhattan live` asserts exactly that on every run and fails if wrong-posting counts differ between the live model and the offline stub.
+
+`Go` `Meet in the middle` `Agent loop` `Groq` `React` `TypeScript`
+
+[repo →](https://github.com/Rishi0507/Manhattan)
 
 ---
 
-<a id="ojas"></a>
+<a id="soteria"></a>
 
-## 01 · OJAS: Objective Judgement for Academic Sincerity
+## 02 · Soteria
 
-*Offline exam-hall video analytics. Built for PS2 at the DrishtiAI hackathon.*
+*Recall detection, lot-level containment and proof of action for online grocery.*
 
-800 centres, 4 cameras, 3 hours: 9,600 camera-hours per exam session, roughly 400 days of continuous viewing for one person. Nobody watches all of it. So the problem is not "detect cheating." It is deciding where the few reviewer-hours that actually exist should go, and evidencing that decision well enough to survive an appeal. OJAS ranks footage and a human confirms or dismisses. A wrong, unappealable accusation is a worse failure than a missed one, and every threshold in the codebase falls out of that one sentence.
+A recall names lots, not products. Most stores can't tell which lot sits in which box, so they pull every unit, throw away stock that was never contaminated, and keep shipping orders already in flight. Soteria watches the FDA, USDA FSIS and EU RASFF feeds, plus manufacturer catalogs for products withdrawn without any notice, reads each notice down to the exact barcodes and lot codes, and holds only those lots.
 
-Three stages, split by how expensive each one is to iterate on. **Python** for the classical CV: a motion ensemble of frame differencing, MOG2/KNN background subtraction and Farneback optical flow, weighted so that each method's failure mode is covered by the other two, plus spectral-residual saliency lifted from 2-D image work and applied instead to the 1-D motion time series, which buys sudden non-periodic motion for one FFT pass over the whole video. **Go** for detection, anonymised tracking, pose micro-motion and CLIP verification, compiled to a single static binary an exam centre can run with no Python environment on the machine. **Next.js** for the review surface, where verdicts are written into an Ed25519-signed hash-chain custody ledger and exported as signed incident reports. The calibration engine refuses to propose a threshold when the data won't support one.
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/soteria.svg"
+    width="900"
+    alt="One FDA notice through six steps: notice H-1258-2026, matched to lot 1226183 at confidence 0.972, 40 units held while 60 stay on sale, customers offered a refund or cancel before shipping, 5 resale listings of the held lot flagged, 9 events hash-chained and verified"
+  />
+</p>
 
-`Python` `Go` `Next.js` `OpenCV` `YOLOv8n` `ByteTrack` `CLIP` `Ed25519`
+Twelve services on RabbitMQ, every one of them recoverable when it fails: quorum queues with dead-letter limits, idempotent consumers, and a CI test that fails when the topology declared in three places drifts. Above a confidence threshold the containment service acts alone; below it, a person confirms, and a reviewer can narrow the held lots but never widen them. The LLM that reads notices sits behind a deterministic guardrail, so a lot code must appear verbatim in the notice and a barcode must pass its check digit. Every step lands in a per-incident hash chain anchored with an RFC 3161 timestamp, so "what did you do, and when" has an answer that can be verified rather than remembered.
 
-[repo →](https://github.com/Rishi0507/Ojas-Objective-Judgement-for-Academic-Security-Drishti-AI)
+`Go` `Python` `RabbitMQ` `Shopify GraphQL` `Groq` `RFC 3161` `React`
 
----
-
-<a id="autopsy"></a>
-
-## 02 · Autopsy
-
-*Diagnoses why a menu item is underperforming, then rewrites the listing three ways with a reason attached to every change.*
-
-Retrieval pulls the strongest comparable items in the same category, ranked on a blend of text similarity and how well those items are genuinely selling. One LLM call returns a structured diagnosis grounded in them: pricing problem, photo problem, weak description, or placement. A second, chained call turns that diagnosis into three rewrites with deliberately different angles and a rationale for each.
-
-The part I care about is the honesty layer. It runs with zero API keys, and without one every call falls through to a deterministic generator reasoning over exactly the data a real model would see. Every response is stamped `"generation_mode": "live"` or `"mock"`, so a fallback can never quietly pass as a generation. The benchmark harness asks whether the retrieval step actually makes diagnoses more specific than a zero-shot version, and keeps pipeline validation separate from model-quality evaluation, because those are two different questions and conflating them is how a demo starts lying. The dataset is structured and synthetic on purpose, for provenance and ToS reasons, and the README says so before it says anything else.
-
-`FastAPI` `RAG (TF-IDF)` `Structured output` `Eval harness` `Python`
-
-[repo →](https://github.com/Rishi0507/Autopsy)
+[repo →](https://github.com/Rishi0507/Soteria)
 
 ---
 
@@ -94,6 +89,8 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 `Go` `Monte Carlo` `Empirical Bayes` `Python (uv)` `SQLite` `Make`
 
+[repo →](https://github.com/Rishi0507/Pavilion)
+
 ---
 
 <p align="center">
@@ -108,19 +105,84 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 |  | What it decides | What it refuses to do |
 | --- | --- | --- |
-| **OJAS** | which minutes of footage a human should spend time on | call it cheating, or set a threshold the data won't carry |
-| **Autopsy** | why a listing underperforms, and what to change | let a fallback response pass as a model's |
+| **Manhattan** | which payments a bank credit settles | post a match it cannot prove or check |
+| **Soteria** | which lots of a recalled product leave the shelf | pull stock the notice never named |
 | **Pavilion** | how good your call was against the calls you had | roll the dice after you've made the choice |
 
 ---
 
+### Also built
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**[Inquest](https://github.com/Rishi0507/Inquest-Automated-Research-Paper-Reproducibility)**<br/>
+<sub>forensic reproducibility for ML papers</sub>
+
+Runs a paper's code in a sandbox, records what it actually does, and judges every numerical claim against measured seed bands. Gaps are split across specific deviations with exact Shapley values. No verdict is produced by a language model.
+
+`Python` `Shapley` `Sandboxing` `React`
+
+</td>
+<td width="50%" valign="top">
+
+**[Sovereign AI Workbench](https://github.com/Rishi0507/Sovereign-AI-Workbench)**<br/>
+<sub>agentic layer for air-gapped engineering</sub>
+
+Plans the work, runs the tools and hands back a reviewable draft without anything leaving the premises. Scans are read twice, by OCR and a vision model, and every figure in a deliverable traces back to a hash-chained evidence record.
+
+`Python` `vLLM` `FastAPI` `Go`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[Autopsy](https://github.com/Rishi0507/Autopsy)**<br/>
+<sub>why a menu item underperforms</sub>
+
+Retrieval over the strongest comparable items, a structured diagnosis grounded in them, then three rewrites with a reason for every change. Runs with zero keys, and every response is stamped live or mock so a fallback never passes as a generation.
+
+`FastAPI` `RAG` `Structured output` `Eval harness`
+
+</td>
+<td width="50%" valign="top">
+
+**[OJAS](https://github.com/Rishi0507/Ojas-Objective-Judgement-for-Academic-Security-Drishti-AI)**<br/>
+<sub>exam-hall video, DrishtiAI hackathon</sub>
+
+Ranks thousands of camera-hours so the few reviewer-hours that exist go where they matter, and a human confirms or dismisses. Verdicts go into an Ed25519-signed hash-chain custody ledger and export as signed incident reports.
+
+`Python` `Go` `Next.js` `YOLOv8n` `CLIP`
+
+</td>
+</tr>
+</table>
+
+---
+
+### Stack
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/Rishi0507/Rishi0507/main/stack.svg"
+    width="900"
+    alt="Stack: languages; ml, nlp, llm and vision; services and surfaces"
+  />
+</p>
+
+No logo exists for the half that mattered most: meet-in-the-middle search, exact Shapley attribution, Monte Carlo target search, empirical Bayes shrinkage, hash chains with RFC 3161 anchors, CLIP verification.
+
+---
+
 <details>
-<summary><b>Also in here</b>, five more if you want the long tail</summary>
+<summary><b>The long tail</b>, five more if you want them</summary>
 <br>
 
 - **[Referee](https://github.com/Rishi0507/Referee).** A benchmark harness for AI agent architectures. Fixed tasks with machine-verifiable ground truth, and identical prompts, tool access and grading on every run, so what's being compared is the architecture and nothing else.
 - **[Trace.ai](https://github.com/Rishi0507/Trace.ai).** Predicts recurring inflate-then-discount cycles per seller: seller-grouped XGBoost over STL-decomposed price history, catalogue-wide discount concurrency and seasonality, benchmarked against a single-product z-score baseline. The labels are simulated, and the README leads with that. An existence proof, not validated ground truth.
-- **[IFAS](https://github.com/Rishi0507/IFAS-Intelligent-Footfall-Analysis-System-for-Retail-Environments).** Retail footfall from a single overhead CCTV feed, on a dataset I annotated by hand. Occlusion is most of the problem.
+- **[IFAS](https://github.com/Rishi0507/IFAS-Intelligent-Footfall-Analysis-System-for-Retail-Environments).** Retail footfall from CCTV. Detection and tracking feed a two-stage fine-tuned ViT for gender and PETA-style SVMs for age, and a dashboard turns the run into footfall, dwell and who visits.
 - **[Spine-Guard](https://github.com/abhishek-pandey7/Spine-Guard).** Real-time posture feedback for spinal rehab over a WebSocket, with a collaborator. Landmarks, joint angles, thresholds, alerts.
 - **[micrograd](https://github.com/Rishi0507/micrograd)** and **[LSTM-TextGen](https://github.com/Rishi0507/LSTM-TextGen)**. Written to understand the thing rather than to import it.
 
@@ -128,7 +190,7 @@ Go end to end with no cgo, so the server is one static binary: SQLite is the pur
 
 ## Before this
 
-**Blynt** *(sunset).* Co-founded,built and shipped a cross-platform social app end to end, architectur. Microservices, real-time feeds, push notifications, deployment. Around 800 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
+**Blynt** *(sunset).* Co-founded, built and shipped a cross-platform social app end to end: architecture, microservices, real-time feeds, push notifications, deployment. Around 800 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
 
 ## Reach me
 
