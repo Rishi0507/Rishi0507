@@ -190,7 +190,7 @@ No logo exists for the half that mattered most: meet-in-the-middle search, exact
 
 ## Before this
 
-**Blynt** *(sunset).* Co-founded, built and shipped a cross-platform social app end to end: architecture, microservices, real-time feeds, push notifications, deployment. Around 800 users and 80 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
+**Blynt** *(sunset).* Co-founded, built and shipped a cross-platform social app end to end: architecture, microservices, real-time feeds, push notifications, deployment. Around 800 users and 120 daily active at its peak. Strangers using something you made is a different class of feedback from a green test suite.
 
 ## Reach me
 
